@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtinput_default_margin">30dp</dimen>
+    <dimen name="inputlayout_common_dimension">60dp</dimen>
+    <dimen name="inputlayout_radius">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+    <dimen name="cardview_margin">10dp</dimen>
+    <dimen name="txtview_default_margin">20dp</dimen>
+    <dimen name="cv_radius">25dp</dimen>
+</resources>
