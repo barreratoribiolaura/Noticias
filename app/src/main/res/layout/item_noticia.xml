@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,9 @@
     android:layout_margin="@dimen/cardview_margin"
     android:clickable="true"
     android:focusable="true"
-        >
+    app:cardElevation="40dp"
+    app:cardCornerRadius="40dp"
+    app:cardBackgroundColor="@color/white">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,15 +49,16 @@
                 android:textAlignment="center"
                 />
 
+
             <TextView
                 android:id="@+id/resumen"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/resumenWidth"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/nombre"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
                 android:textAlignment="center"
-                android:layout_margin="@dimen/txtview_default_margin"
                 />
 
             <TextView
@@ -64,18 +67,9 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/resumen"
-                android:layout_margin="@dimen/txtview_default_margin"
+                android:layout_marginEnd="30dp"
+
                 />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:background="#4f5b62"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

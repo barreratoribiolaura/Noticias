@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <ImageView
         android:id="@+id/imgLogin"
@@ -16,6 +16,7 @@
     </ImageView>
 
     <LinearLayout
+        android:id="@+id/layoutinputs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -45,11 +46,13 @@
                 app:boxCornerRadiusTopEnd="@dimen/inputlayout_radius"
                 app:boxCornerRadiusBottomStart="@dimen/inputlayout_radius"
                 app:boxCornerRadiusBottomEnd="@dimen/inputlayout_radius"
+                app:helperTextEnabled="true"
+                app:helperTextTextColor="@color/helperTextColor"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputNombre"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/edittextDimension"
                     android:hint="@string/inputhintUsuario"
                     android:backgroundTint="#e6ceff">
                 </com.google.android.material.textfield.TextInputEditText>
@@ -59,19 +62,21 @@
                 android:id="@+id/tilContraseña"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/inputlayout_common_dimension"
-                android:layout_margin="@dimen/txtinput_default_margin"
+                android:layout_marginEnd="@dimen/txtinput_default_margin"
+                android:layout_marginStart="@dimen/txtinput_default_margin"
                 android:layout_marginTop="@dimen/txtinput_default_margin"
-                android:layout_marginBottom="@dimen/txtinput_default_margin"
                 app:boxCornerRadiusTopStart="@dimen/inputlayout_radius"
                 app:boxCornerRadiusTopEnd="@dimen/inputlayout_radius"
                 app:boxCornerRadiusBottomStart="@dimen/inputlayout_radius"
                 app:boxCornerRadiusBottomEnd="@dimen/inputlayout_radius"
                 app:endIconMode="password_toggle"
+                app:helperTextEnabled="false"
+                app:helperTextTextColor="@color/helperTextColor"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/inputContrasenya"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/edittextDimension"
                     android:hint="@string/inputhintContraseña"
                     android:backgroundTint="#e6ceff"
                     android:inputType="textPassword">
@@ -79,15 +84,65 @@
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Recordarme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/checkbox">
+
+            </TextView>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           android:layout_margin="30dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegister"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btntxtRegistro"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#883997">
+            </com.google.android.material.button.MaterialButton>
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btntxtEntrar"
-                android:layout_marginBottom="@dimen/txtinput_default_margin"
+                android:layout_margin="20dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#883997">
             </com.google.android.material.button.MaterialButton>
+
+
+
+        </LinearLayout>
+
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

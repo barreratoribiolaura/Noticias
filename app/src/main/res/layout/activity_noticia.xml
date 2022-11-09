@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoticiasActivity"
+    tools:context=".Activities.NoticiasActivity"
     android:id="@+id/activitynoticia">
 
     <ImageView
@@ -25,4 +25,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_noticia"/>
 
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/add_noticia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:hideOnScroll="true"
+            app:fabAnimationMode="scale"
+            android:layout_margin="15dp"
+            android:backgroundTint="#7b1fa2"
+            app:tint="#fff1ff"
+            >
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 </androidx.constraintlayout.widget.ConstraintLayout>

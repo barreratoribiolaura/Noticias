@@ -15,4 +15,14 @@
     <string name="login_failed">"Login failed"</string>
     <string name="Login">EL NOTICIERO DE LAU</string>
     <string name="txtnoticias">NOTICIAS</string>
+    <string name="add_noticia">addnoticia</string>
+    <string name="card_input_url">Escribe la URL</string>
+    <string name="requerido">Requerido</string>
+    <string name="card_input_titulo">Escribe el título</string>
+    <string name="btnSave">Guardar</string>
+    <string name="card_input_Imagen">Añade la url de la imagen</string>
+    <string name="opcional">Opcional</string>
+    <string name="card_input_descripcion">Añade una descripción</string>
+    <string name="card_input_Fecha">Añade la fecha</string>
+    <string name="btntxtRegistro">Registrarse</string>
 </resources>

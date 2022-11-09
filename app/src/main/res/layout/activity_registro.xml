@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegistroActivity">
+
+    <ImageView
+        android:id="@+id/imgLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:cardCornerRadius="25dp"
+        android:background="#d05ce3">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="70dp"
+            android:fontFamily="sans-serif-black"
+            android:text="REGISTRO"
+            android:textAlignment="center"
+            android:textColor="#530261"
+            android:textSize="34sp"
+            android:textStyle="bold">
+
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNombre"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputlayout_common_dimension"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/txtinput_default_margin"
+            android:layout_marginBottom="@dimen/txtinput_default_margin"
+            android:layout_marginStart="@dimen/txtinput_default_margin"
+            android:layout_marginEnd="@dimen/txtinput_default_margin"
+            app:boxCornerRadiusTopStart="@dimen/inputlayout_radius"
+            app:boxCornerRadiusTopEnd="@dimen/inputlayout_radius"
+            app:boxCornerRadiusBottomStart="@dimen/inputlayout_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/inputlayout_radius"
+            app:helperTextEnabled="false"
+            app:helperTextTextColor="@color/helperTextColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNombre"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittextDimension"
+                android:hint="@string/inputhintUsuario"
+                android:backgroundTint="#e6ceff">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputlayout_common_dimension"
+            android:layout_margin="@dimen/txtinput_default_margin"
+            android:layout_marginTop="@dimen/txtinput_default_margin"
+            android:layout_marginBottom="@dimen/txtinput_default_margin"
+            app:boxCornerRadiusTopStart="@dimen/inputlayout_radius"
+            app:boxCornerRadiusTopEnd="@dimen/inputlayout_radius"
+            app:boxCornerRadiusBottomStart="@dimen/inputlayout_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/inputlayout_radius"
+            app:endIconMode="password_toggle"
+            app:helperTextEnabled="false"
+            app:helperTextTextColor="@color/helperTextColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputContrasenya"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittextDimension"
+                android:hint="@string/inputhintContraseña"
+                android:backgroundTint="#e6ceff"
+                android:inputType="textPassword">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrarse"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btntxtRegistro"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#883997">
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
